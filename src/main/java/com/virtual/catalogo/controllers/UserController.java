@@ -59,6 +59,7 @@ public class UserController {
     
     //prueba si el new user es correcto si no devuelve el user   
     @PostMapping("/new")
+    @ResponseStatus(HttpStatus.ACCEPTED)
     public Optional<User> save (@RequestBody User user) {         
          try {
              service.save(user);
@@ -75,7 +76,7 @@ public class UserController {
     *@return
     */ 
     @GetMapping("/{email}")
-    @ResponseStatus(HttpStatus.ACCEPTED)
+    //@ResponseStatus(HttpStatus.ACCEPTED)
     public boolean emailExist(@PathVariable("email") String email) {
         return service.emailExist(email); 
          

@@ -30,10 +30,10 @@ public class User implements Serializable {
     
     @Column(length=50, nullable = false)
     private String email;
-     
-    @Column(length=80, nullable = false)
-    private String name;
       
     @Column(length=50, nullable = false)
     private String password;
+    
+    @Column(length=80, nullable = false)
+    private String name;
 }
