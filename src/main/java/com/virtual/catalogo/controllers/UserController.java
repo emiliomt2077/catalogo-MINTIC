@@ -59,7 +59,7 @@ public class UserController {
     
     //prueba si el new user es correcto si no devuelve el user   
     @PostMapping("/new")
-    @ResponseStatus(HttpStatus.ACCEPTED)
+    @ResponseStatus(HttpStatus.CREATED)
     public Optional<User> save (@RequestBody User user) {         
          try {
              service.save(user);
